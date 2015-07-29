@@ -11,13 +11,14 @@ namespace Nancy.Authentication.Token.S3Storage
 {
     public class S3TokenKeyStorage : ITokenKeyStore
     {
-        private const string FileKey = "keyChain.bin";
+        private readonly string _keyName;
         private static readonly object SyncLock = new object();
         private readonly AmazonStorageService _amazonStorageService;
         private readonly BinaryFormatter _binaryFormatter;
 
-        public S3TokenKeyStorage()
+        public S3TokenKeyStorage(string keyName)
         {
+            _keyName = keyName;
             _binaryFormatter = new BinaryFormatter();
             _amazonStorageService = new AmazonStorageService(new AppSettingsAmazonS3Configuration());
         }
@@ -26,12 +27,12 @@ namespace Nancy.Authentication.Token.S3Storage
         {
             lock (SyncLock)
             {
-                if (!_amazonStorageService.ContainsFile(FileKey))
+                if (!_amazonStorageService.ContainsFile(_keyName))
                 {
                     return new Dictionary<DateTime, byte[]>();
                 }
 
-                var fileContent = _amazonStorageService.Get(FileKey);
+                var fileContent = _amazonStorageService.Get(_keyName);
 
                 using (var stream = new MemoryStream(fileContent.Content))
                 {
@@ -49,7 +50,7 @@ namespace Nancy.Authentication.Token.S3Storage
                 using (var stream = new MemoryStream())
                 {
                     _binaryFormatter.Serialize(stream, keyChain);
-                    var content = new FileContent(FileKey, stream.ReadBytes());
+                    var content = new FileContent(_keyName, stream.ReadBytes());
                     _amazonStorageService.Save(content);
                 }
             }
@@ -59,7 +60,10 @@ namespace Nancy.Authentication.Token.S3Storage
         {
             lock (SyncLock)
             {
-                _amazonStorageService.Delete(FileKey);
+                if (_amazonStorageService.ContainsFile(_keyName))
+                {
+                    _amazonStorageService.Delete(_keyName);
+                }
             }
         }
     }

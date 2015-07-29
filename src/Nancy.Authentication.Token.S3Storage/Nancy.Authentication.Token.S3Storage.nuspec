@@ -15,5 +15,9 @@
     </releaseNotes>
     <copyright>Copyright 2015</copyright>
     <tags>nancy token authentication keystore key s3 aws amazon storage</tags>
+    <dependencies>
+      <dependency id="GzipS3Client" version="1.0.6.0" />
+      <dependency id="Nancy.Authentication.Token" version="1.2.0"  />
+    </dependencies>
   </metadata>
 </package>
