@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nancy.Authentication.Token.S3Storage", "Nancy.Authentication.Token.S3Storage\Nancy.Authentication.Token.S3Storage.csproj", "{FEE327FC-2E77-47D2-985E-FB98CACEF0CF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nancy.Authentication.Token.S3Storage", "src\Nancy.Authentication.Token.S3Storage\Nancy.Authentication.Token.S3Storage.csproj", "{7F71FD13-B3D2-4612-A833-DAC480EC18DE}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{6C1D92F6-5E5C-481F-8C6E-C77FA8357EB2}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{C0CB97A3-3451-49E4-9D73-4F756F5603E2}"
 	ProjectSection(SolutionItems) = preProject
 		.nuget\NuGet.Config = .nuget\NuGet.Config
 		.nuget\NuGet.exe = .nuget\NuGet.exe
@@ -18,10 +18,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{FEE327FC-2E77-47D2-985E-FB98CACEF0CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FEE327FC-2E77-47D2-985E-FB98CACEF0CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FEE327FC-2E77-47D2-985E-FB98CACEF0CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FEE327FC-2E77-47D2-985E-FB98CACEF0CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F71FD13-B3D2-4612-A833-DAC480EC18DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F71FD13-B3D2-4612-A833-DAC480EC18DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F71FD13-B3D2-4612-A833-DAC480EC18DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F71FD13-B3D2-4612-A833-DAC480EC18DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

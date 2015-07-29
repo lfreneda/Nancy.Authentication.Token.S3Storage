@@ -35,7 +35,7 @@ namespace Nancy.Authentication.Token.S3Storage
 
                 using (var stream = new MemoryStream(fileContent.Content))
                 {
-                    return (Dictionary<DateTime, byte[]>) _binaryFormatter.Deserialize(stream);
+                    return (Dictionary<DateTime, byte[]>)_binaryFormatter.Deserialize(stream);
                 }
             }
         }

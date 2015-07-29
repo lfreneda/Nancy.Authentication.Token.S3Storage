@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>lfreneda</authors>
+    <owners>lfreneda</owners>
+    <licenseUrl>https://raw.githubusercontent.com/lfreneda/Nancy.Authentication.Token.S3Storage/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/lfreneda/Nancy.Authentication.Token.S3Storage</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/lfreneda/Nancy.Authentication.Token.S3Storage/master/ico.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    <releaseNotes>
+    </releaseNotes>
+    <copyright>Copyright 2015</copyright>
+    <tags>nancy token authentication keystore key s3 aws amazon storage</tags>
+  </metadata>
+</package>
