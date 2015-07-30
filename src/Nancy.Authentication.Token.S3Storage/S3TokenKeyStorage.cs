@@ -50,7 +50,11 @@ namespace Nancy.Authentication.Token.S3Storage
                 using (var stream = new MemoryStream())
                 {
                     _binaryFormatter.Serialize(stream, keyChain);
-                    var content = new FileContent(_keyName, stream.ReadBytes());
+                    
+                    stream.Position = 0;
+                    var bytes = stream.ReadBytes();
+
+                    var content = new FileContent(_keyName, bytes);
                     _amazonStorageService.Save(content);
                 }
             }
